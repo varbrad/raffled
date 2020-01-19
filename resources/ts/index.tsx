@@ -1,5 +1,19 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './App'
+import { InertiaApp } from '@inertiajs/inertia-react'
 
-render(<App />, document.getElementById('app'))
+const mount = () => {
+  const app = document.getElementById('app')
+  if (!app) throw new Error('The app element could not be found!')
+  if (!app.dataset.page) throw new Error('App did not include any page data!')
+
+  render(
+    <InertiaApp
+      initialPage={JSON.parse(app.dataset.page)}
+      resolveComponent={name => import(`./pages/${name}`).then(module => module.default)}
+    />, app
+  )
+}
+
+
+mount()
