@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "htm": "./htm.js",
+    "preact": "./preact.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js"
+  }
+}
