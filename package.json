@@ -1,0 +1,7 @@
+{
+    "private": true,
+    "scripts": {},
+    "devDependencies": {
+        "snowpack": "^1.0.5"
+    }
+}
