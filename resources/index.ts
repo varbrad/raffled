@@ -1,2 +1,1 @@
-// Entrypoint
 import './ts/index'
